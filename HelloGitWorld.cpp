@@ -1,9 +1,15 @@
 #include <iostream>
 using namespace std;
 
-int main()
+// Hello World with input args
+int main(int argc, char** argv)
 {
-  cout << "Hello Git World!" << endl;
-  
-  return 0;
+	string inputArgs[argc];
+	
+	for (int i = 0; i < argc; i++)
+		inputArgs[i] = string(argv[i]);
+		
+	for ( auto str : inputArgs)
+		cout << "Hello, " << str << " Gitword!" << endl;
+	return 0;
 }
